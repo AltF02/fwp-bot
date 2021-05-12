@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+praw = "7.2"
+pyyaml = "*"
+discord = {py = "1.7"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
