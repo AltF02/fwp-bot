@@ -11,5 +11,8 @@ feedparser = "*"
 
 [dev-packages]
 
+[scripts]
+start = "python3 main.py"
+
 [requires]
 python_version = "3.6"
