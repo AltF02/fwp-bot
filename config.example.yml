@@ -1,4 +1,7 @@
 discord:
+  channel:
+  role:
+  prefix: ;
   token: ''
 reddit:
   client_id: ''
@@ -14,3 +17,5 @@ reddit:
         - 'no3'
 
     post: ''
+youtube:
+  channel_id: ''
