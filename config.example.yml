@@ -1,0 +1,16 @@
+discord:
+  token: ''
+reddit:
+  client_id: ''
+  client_secret: ''
+  refresh_token: ''
+  user_agent: ''
+  flairs:
+    user:
+      id: ''
+      levels:
+        - 'no1'
+        - 'no2'
+        - 'no3'
+
+    post: ''

@@ -4,9 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-praw = "7.2"
 pyyaml = "*"
 discord = {py = "1.7"}
+asyncpraw = "*"
+feedparser = "*"
 
 [dev-packages]
 
