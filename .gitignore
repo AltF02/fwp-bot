@@ -1,3 +1,4 @@
 config.yml
 .idea
 src/__pycache__
+pm2.config.json

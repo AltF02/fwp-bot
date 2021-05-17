@@ -24,6 +24,14 @@ class Meta(commands.Cog):
         await ctx.send("Updated the channel to {0}".format(channel.mention))
 
     @config.command()
+    async def role(self, ctx: commands.Context, role: discord.Role):
+        self.bot.config.data['discord']['role'] = role.id
+        with open(self.bot.location, 'w') as file:
+            yaml.dump(self.bot.config.data, file)
+
+        await ctx.send("Updated the channel to {0}".format(role.mention))
+
+    @config.command()
     async def prefix(self, ctx: commands.Context, new: str = None):
         if new is None:
             await ctx.send("My current prefix is {0}".format(ctx.prefix))
