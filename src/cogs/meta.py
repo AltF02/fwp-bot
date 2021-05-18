@@ -52,7 +52,7 @@ class Meta(commands.Cog):
         await fwp.start(ctx.message)
 
         await ctx.send("Generating list...")
-        await ctx.send("```\n{0}\n```".format(fwp.generate()))
+
 
 
 def setup(bot):

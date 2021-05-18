@@ -3,7 +3,7 @@ from typing import Dict
 import time
 
 import discord
-from discord.ext import commands
+import io
 from asyncpraw.models import Submission
 from asyncpraw.models.reddit.submission import SubmissionFlair
 
@@ -112,10 +112,11 @@ class Fwp:
                                        "1:30`\n\n"
                                        "```{0}```".format(e))
 
-    def generate(self) -> str:
+    def generate(self) -> io.StringIO:
         self._sort()
-        comment = ''
+        comment = io.StringIO()
         for k in self.posts.keys():
-            comment += "* [https://reddit.com{0}]({1}) {2}\n".format(k.permalink, k.title, self.posts[k])
+            comment.write("* [https://reddit.com{0}]({1}) {2}\n".format(k.permalink, k.title, self.posts[k]))
 
+        comment.seek(0)
         return comment

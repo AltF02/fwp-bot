@@ -53,7 +53,7 @@ class Youtube(commands.Cog):
             await fwp.start(msg)
 
             await msg.channel.send("Generating list...")
-            await msg.channel.send("```\n{0}\n```".format(fwp.generate()))
+            await msg.channel.send(file=discord.File(fwp.generate(), "list.txt"))
         else:
             await msg.channel.send('😦 Sadge, better luck next time!\n\n'
                                    '*If this is a mistake you can force the video with, '
