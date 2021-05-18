@@ -52,7 +52,7 @@ class Meta(commands.Cog):
         await fwp.start(ctx.message)
 
         await ctx.send("Generating list...")
-
+        await ctx.send("Done!", file=discord.File(fwp.generate(), "list.txt"))
 
 
 def setup(bot):
