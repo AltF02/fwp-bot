@@ -19,7 +19,7 @@ class Fwp:
         self.format = "%M:%S"
 
     def _add(self, submission: Submission, timestamp: str):
-        if not timestamp.startswith('0'):
+        if not timestamp.startswith('0') and len(timestamp) < 4:
             timestamp = '0' + timestamp
 
         self.posts[submission] = timestamp
@@ -116,7 +116,7 @@ class Fwp:
         self._sort()
         comment = io.StringIO()
         for k in self.posts.keys():
-            comment.write("* [https://reddit.com{0}]({1}) {2}\n".format(k.permalink, k.title, self.posts[k]))
+            comment.write("* [{0}](https://reddit.com{1}) {2}\n".format(k.title, k.permalink, self.posts[k]))
 
         comment.seek(0)
         return comment
